@@ -20,11 +20,11 @@ DHT11 dht11(2);
 
 SSD1306Wire display(0x3c, 14, 12);
 
-// variables
+//-------- Variables --------------------------------
 int temperature = 0;
 int humidity = 0;
 
-//-------- Life Cycle
+//-------- Life Cycle -------------------------------
 
 void setup() {
   Serial.begin(9600);
@@ -53,7 +53,7 @@ void loop() {
   }
 }
 
-//-------- Utils Functions
+//-------- Utils Functions --------------------------------
 
 void log(int temperature, int humidity) {
   Serial.print("Temperature: ");
