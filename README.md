@@ -21,9 +21,9 @@ Gaming consoles and other devices are often placed in cabinets or poorly ventila
 
 ---
 
-## 🛠️ Required Components  
-- 1 x Arduino board (e.g., Uno, Nano, etc.)  
-- 1 x Temperature sensor (e.g., DHT11 or LM35)  
+## 🛠️ Used Components  
+- 1 x [NodeMCU ESP8266 Development Board With 0.96 Inch OLED Display CH340G ESP-12F WiFi Module](https://s.click.aliexpress.com/e/_op1ER6B)
+- 1 x [Temperature sensor: DHT11 Module](https://s.click.aliexpress.com/e/_oFnJr6f)
 - 1 x Red LED  
 - 1 x Piezoelectric buzzer  
 - Jumper wires and resistors  
