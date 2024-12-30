@@ -23,6 +23,12 @@ SSD1306Wire display(0x3c, 14, 12);
 //-------- Variables --------------------------------
 int temperature = 0;
 int humidity = 0;
+const int LED_PIN = 4;     //GPIO4 > D2
+const int BUZZER_PIN = 5;  //GPIO5 > D1
+
+const int TEMP_WARNING = 30;
+const int TEMP_CRITICAL = 36;
+const int TONE = 432;
 
 //-------- Life Cycle -------------------------------
 
@@ -44,10 +50,22 @@ void loop() {
   int result = dht11.readTemperatureHumidity(temperature, humidity);
 
   if (result == 0) {
+    ledOff();
     log(temperature, humidity);
     writeDisplay(String(temperature) + " ºC");
 
+    if (temperature >= TEMP_WARNING) {
+      ledOn();
+    } else {
+      ledOff();
+    }
+
+    if (temperature >= TEMP_CRITICAL) {
+      playBuzzer();
+    }
+
   } else {
+    ledOn();
     Serial.println(DHT11::getErrorString(result));
     writeDisplay("Error " + String(result));
   }
@@ -67,4 +85,16 @@ void writeDisplay(String text) {
   display.clear();
   display.drawString(display.getWidth() / 2, display.getHeight() / 2, text);
   display.display();
+}
+
+void ledOn() {
+  digitalWrite(LED_PIN, HIGH);
+}
+
+void ledOff() {
+  digitalWrite(LED_PIN, LOW);
+}
+
+void playBuzzer() {
+  tone(BUZZER_PIN, TONE, 50);
 }
