@@ -11,20 +11,21 @@
 #include <DHT11.h>
 #include <Wire.h>         // Only needed for Arduino 1.6.5 and earlier
 #include "SSD1306Wire.h"  // legacy include: `#include "SSD1306.h"`
+#include "NodeMcuPins.h"
 
 // Create an instance of the DHT11 class.
 // - For Arduino: Connect the sensor to Digital I/O Pin 2.
 // - For ESP32: Connect the sensor to pin GPIO2 or P2.
 // - For ESP8266: Connect the sensor to GPIO2 or D4.
-DHT11 dht11(2);
+DHT11 dht11(D4);
 
-SSD1306Wire display(0x3c, 14, 12);
+SSD1306Wire display(0x3c, D5, D6);
 
 //-------- Variables --------------------------------
 int temperature = 0;
 int humidity = 0;
-const int LED_PIN = 4;     //GPIO4 > D2
-const int BUZZER_PIN = 5;  //GPIO5 > D1
+const int LED_PIN = D2;
+const int BUZZER_PIN = D1;
 
 const int TEMP_WARNING = 30;
 const int TEMP_CRITICAL = 36;
