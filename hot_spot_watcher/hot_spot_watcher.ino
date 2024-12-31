@@ -4,7 +4,7 @@
  * where electronic devices like gaming consoles are installed.
  *
  * Author: fbvictorhugo
- * Version: 0.0.1
+ * Version: 0.1.0
  * License: MIT
  */
 
@@ -27,7 +27,7 @@ int humidity = 0;
 const int LED_PIN = D2;
 const int BUZZER_PIN = D1;
 
-const int TEMP_WARNING = 30;
+const int TEMP_WARNING = 29;
 const int TEMP_CRITICAL = 36;
 const int TONE = 432;
 
@@ -37,13 +37,14 @@ void setup() {
   Serial.begin(9600);
 
   display.init();
-  display.flipScreenVertically();
-  // display.setContrast(255);
+  //display.flipScreenVertically();
+  //display.setContrast(255);
   display.setTextAlignment(TEXT_ALIGN_CENTER_BOTH);
   display.setFont(ArialMT_Plain_10);
   writeDisplay("Inicializing ...");
 
   display.setFont(ArialMT_Plain_24);
+  pinMode(LED_PIN, OUTPUT);
 }
 
 void loop() {
@@ -98,4 +99,5 @@ void ledOff() {
 
 void playBuzzer() {
   tone(BUZZER_PIN, TONE, 50);
+  Serial.println("BUZZER BUZZER BUZZER");
 }

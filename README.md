@@ -15,8 +15,8 @@ Gaming consoles and other devices are often placed in cabinets or poorly ventila
    - Detects and displays real-time ambient temperature.  
 
 2. **Visual and Sound Alerts**:  
-   - **30°C (86°F)**: Red LED is activated as an initial warning.  
-   - **38°C (100.4°F) or higher**: A buzzer starts beeping, signaling immediate action is needed.  
+   - **29°C or higher**: Red LED is activated as an initial warning.  
+   - **36°C or higher**: A buzzer starts beeping, signaling immediate action is needed.  
    - Configurable for progressive alerts as the temperature rises.  
 
 ---
@@ -35,3 +35,22 @@ Gaming consoles and other devices are often placed in cabinets or poorly ventila
 1. Clone the repository:  
    ```bash
    git clone https://github.com/fbvictorhugo/hot_spot_watcher.git
+   ```
+2. Assemble the circuit as per the schematic provided in the repository.
+3. Upload the code to the Arduino using the official IDE.
+4. Place the Arduino in the space to be monitored and connect it to the device via USB (or external power source).
+
+---
+
+## 📝 Configuration
+Temperature thresholds can be adjusted directly in the code:
+
+Warning threshold: `TEMP_WARNING = 29`;
+
+Critical threshold: `TEMP_CRITICAL = 36`;
+
+--- 
+
+## 📚 Contributions
+This is an open-source project, and contributions are welcome! Feel free to open an issue or submit a pull request.
+
