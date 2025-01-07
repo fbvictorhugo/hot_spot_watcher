@@ -15,8 +15,8 @@ Gaming consoles and other devices are often placed in cabinets or poorly ventila
    - Detects and displays real-time ambient temperature.  
 
 2. **Visual and Sound Alerts**:  
-   - **29°C or higher**: Red LED is activated as an initial warning.  
-   - **36°C or higher**: A buzzer starts beeping, signaling immediate action is needed.  
+   - **`TEMP_WARNING` or higher**: Red LED is activated as an initial warning.  
+   - **`TEMP_CRITICAL` or higher**: A buzzer starts beeping, signaling immediate action is needed.  
    - Configurable for progressive alerts as the temperature rises.  
 
 ---
@@ -45,12 +45,19 @@ Gaming consoles and other devices are often placed in cabinets or poorly ventila
 ## 📝 Configuration
 Temperature thresholds can be adjusted directly in the code:
 
-Warning threshold: `TEMP_WARNING = 29`;
+Warning threshold: `TEMP_WARNING = 34`;
 
-Critical threshold: `TEMP_CRITICAL = 36`;
+Critical threshold: `TEMP_CRITICAL = 38`;
 
 --- 
 
 ## 📚 Contributions
 This is an open-source project, and contributions are welcome! Feel free to open an issue or submit a pull request.
 
+--- 
+
+## 🖼️ Images
+
+|![](/images/front_off.png)|![](/images/front_on.png) |![](/images/back.png) |
+|-|-|-|
+| |![HotSpotWatcher](/images/project.gif)| |
