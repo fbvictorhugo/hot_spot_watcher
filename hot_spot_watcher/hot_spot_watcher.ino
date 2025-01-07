@@ -27,8 +27,8 @@ int humidity = 0;
 const int LED_PIN = D2;
 const int BUZZER_PIN = D1;
 
-const int TEMP_WARNING = 29;
-const int TEMP_CRITICAL = 36;
+const int TEMP_WARNING = 34;
+const int TEMP_CRITICAL = 38;
 const int TONE = 432;
 
 //-------- Life Cycle -------------------------------
