@@ -58,7 +58,6 @@ This is an open-source project, and contributions are welcome! Feel free to open
 
 ## 🖼️ Images
 
-![HotSpotWatcher](/images/project.gif)
-
 |![](/images/front_off.png)|![](/images/front_on.png) |![](/images/back.png) |
 |-|-|-|
+| |![HotSpotWatcher](/images/project.gif)| |
